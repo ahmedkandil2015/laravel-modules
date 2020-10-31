@@ -46,7 +46,8 @@ class FileActivatorTest extends BaseTestCase
         $this->assertMatchesSnapshot($this->finder->get($this->activator->getStatusesFilePath()));
 
         $this->activator->setActive($this->module, true);
-        $this->assertMatchesSnapshot($this->finder->get($this->activator->getStatusesFilePath()));
+        $getStatusFilePath = $this->finder->get($this->activator->getStatusesFilePath());
+        $this->assertMatchesSnapshot($getStatusFilePath);
     }
 
     /** @test */
