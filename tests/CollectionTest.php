@@ -28,8 +28,9 @@ class CollectionTest extends BaseTestCase
     /** @test */
     public function getItemsReturnsTheCollectionItems()
     {
+        $recipent = new Module($this->app, 'module-one', __DIR__ . '/stubs/valid/Recipe');
         $modules = [
-            new Module($this->app, 'module-one', __DIR__ . '/stubs/valid/Recipe'),
+            $recipent,
             new Module($this->app, 'module-two', __DIR__ . '/stubs/valid/Requirement'),
         ];
         $collection = new Collection($modules);
