@@ -32,6 +32,7 @@ class CollectionTest extends BaseTestCase
             new Module($this->app, 'module-one', __DIR__ . '/stubs/valid/Recipe'),
             new Module($this->app, 'module-two', __DIR__ . '/stubs/valid/Requirement'),
         ];
+        $modules = $modules;
         $collection = new Collection($modules);
         $items = $collection->getItems();
 
